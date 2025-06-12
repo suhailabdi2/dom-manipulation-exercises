@@ -45,3 +45,37 @@ function compareValues(){
         document.querySelector(`label[for="smaller-value"]`).style.color="black";
     }
 }
+/*solution 7*/
+
+function renderPhotos({format , author, image_url}){
+    const li = document.createElement("li");
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  const image = document.createElement("img");
+  image.classList.add("card__image");
+  image.src = image_url;
+
+  const meta = document.createElement("div");
+  meta.classList.add("card__meta");
+
+  const authorEl = document.createElement("p");
+  authorEl.classList.add("card__author");
+  authorEl.append(author);
+
+  const formatEl = document.createElement("p");
+  formatEl.classList.add("card__format");
+  formatEl.append(format);
+
+  meta.appendChild(formatEl);
+  meta.appendChild(authorEl);
+
+  card.appendChild(image);
+  card.appendChild(meta);
+
+  li.appendChild(card);
+
+  return li;
+}
+const Container = document.querySelector(".photos");
+data.photos.map(photo =>Container.appendChild(renderPhotos(photo)));
