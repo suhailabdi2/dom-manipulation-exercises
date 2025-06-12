@@ -21,3 +21,8 @@ document.getElementById("follow-me-parent").addEventListener("mousemove",functio
     const {offsetX,offsetY} =event;
     cow.style=`top:${offsetY}px; left:${offsetX}px; position:absolute;`;
 })
+/*solution 4*/
+document.querySelector(".has-children li:last-child").style.backgroundColor = "palevioletred";
+document.querySelector(".has-children li:first-child").style.backgroundColor ="blue";
+document.querySelector(".has-children li:nth-child(9)").style.backgroundColor ="green";
+document.querySelectorAll(".has-children li:nth-child(even)").forEach(element =>element.style=`background-color:lime;color:white;`);
