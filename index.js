@@ -31,3 +31,17 @@ const output= document.querySelector(".wrote");
 document.querySelector("input[name='input']").addEventListener("keyup",function(event){
     output.innerHTML = event.target.value;
 })
+/*solution 6 */
+
+function compareValues(){
+    const v1 = parseInt(document.querySelector("input[name=large-value]").value);
+    const v2 = parseInt(document.querySelector("input[name=smaller-value]").value);
+    if(v2>v1){
+        document.querySelector(".error").classList.remove("error--hidden");
+        document.querySelector(`label[for ="smaller-value"]`).style.color="red";  
+    }
+    else{
+        document.querySelector(".error").classList.add("error--hidden");
+        document.querySelector(`label[for="smaller-value"]`).style.color="black";
+    }
+}
