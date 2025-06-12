@@ -14,3 +14,10 @@ function openDialog(){
     modal.classList.remove("modal--hidden");
     document.getElementById("open-dialog").style.display = "none";
 }
+
+/*solution 3*/
+const cow = document.querySelector(".follow-me");
+document.getElementById("follow-me-parent").addEventListener("mousemove",function (event){
+    const {offsetX,offsetY} =event;
+    cow.style=`top:${offsetY}px; left:${offsetX}px; position:absolute;`;
+})
