@@ -26,3 +26,8 @@ document.querySelector(".has-children li:last-child").style.backgroundColor = "p
 document.querySelector(".has-children li:first-child").style.backgroundColor ="blue";
 document.querySelector(".has-children li:nth-child(9)").style.backgroundColor ="green";
 document.querySelectorAll(".has-children li:nth-child(even)").forEach(element =>element.style=`background-color:lime;color:white;`);
+/*solution 5*/
+const output= document.querySelector(".wrote");
+document.querySelector("input[name='input']").addEventListener("keyup",function(event){
+    output.innerHTML = event.target.value;
+})
